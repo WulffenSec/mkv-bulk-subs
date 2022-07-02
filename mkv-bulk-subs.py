@@ -26,20 +26,29 @@ def y_n(question,answer,fail):
 
 # Creates files for working later.
 os.system('ls *.mkv > files.txt')
-files = open('files.txt','r')
+with open('./files.txt','r') as f:
+    files = f.read()
 os.system('ls *.srt > subs.txt')
-subs = open('subs.txt','r')
+with open('./subs.txt','r') as f:
+    subs = f.read()
+files = files.rsplit()
+subs = subs.rsplit()
+if len(files) != len(subs):
+    print('No the same amount of MKV files and SRT files')
+    quit()
 
 # Creates list, and gives output to check if the script can work.
 files_list = list()
 subs_list = list()
 print('Check for similarity in the MKV and SRT files')
 print('Example: This.is.an.example.1e01.mkv AND This is an example s01e01.srt')
-for f,s in zip(files,subs):
-    f = f.split('.mkv')
+for l in range(len(files)):
+    f = files[0].split('.mkv')
     files_list.append(f[0])
-    s = s.split('.srt')
+    s = subs[0].split('.srt')
     subs_list.append(s[0])
+    files.pop(0)
+    subs.pop(0)
     print(f[0],'AND',s[0])
 
 # Question the user for input about similarity in names of files.
