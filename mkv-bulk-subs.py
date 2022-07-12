@@ -3,7 +3,7 @@
 #       MKV BULK SUBS       #
 #############################
 # Author: Marcos Dos Santos #
-# Github: dotvectortech     #
+# Github: WulffenSec        #
 #############################
 
 # Import.
