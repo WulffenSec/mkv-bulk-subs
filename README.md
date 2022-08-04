@@ -15,7 +15,7 @@
 ### In your terminal
 
 ```
-git clone https://www.github.com/dotvectortech/mkv-bulk-subs.git
+git clone https://www.github.com/WulffenSec/mkv-bulk-subs.git
 cd mkv-bulk-subs
 python mkv-bulk-subs.py
 ```
