@@ -1,5 +1,7 @@
 # MKV BULK SUBS
 
+# NEEDS RE-DO, ARCHIVING...
+
 ## What is it?
 
 > It's a simple script to automate adding subtitles to movies or series in MKV format using SRT files.
